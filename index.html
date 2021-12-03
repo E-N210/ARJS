@@ -20,46 +20,7 @@
 
         <a-camera gps-camera rotation-reader></a-camera>
 
+        <a-entity gltf-model="./magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 45.508519; latitude: 9.162836;" animation-mixer/>
+
 	</a-scene>
-<script>
-  window.onload = () => {
-       let places = staticLoadPlaces();
-       renderPlaces(places);
-  };
-
-  function staticLoadPlaces() {
-      return [
-          {
-              name: 'Magnemite',
-              location: {
-                  lat: 45.508508,
-                  lng: 9.162992,
-              }
-          },
-      ];
-  }
-
-  function renderPlaces(places) {
-      let scene = document.querySelector('a-scene');
-
-      places.forEach((place) => {
-          let latitude = place.location.lat;
-          let longitude = place.location.lng;
-
-          let model = document.createElement('a-entity');
-          model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-          model.setAttribute('gltf-model', './assets/magnemite/scene.gltf');
-          model.setAttribute('rotation', '0 180 0');
-          model.setAttribute('animation-mixer', '');
-          model.setAttribute('scale', '0.5 0.5 0.5');
-
-          model.addEventListener('loaded', () => {
-              window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-          });
-
-          scene.appendChild(model);
-      });
-  }
-</script>
-
 </body>
