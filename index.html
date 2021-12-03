@@ -32,8 +32,18 @@
 
 	</a-scene>
 <script>
-  $("#scimmia").addEventListener("onefingermove", handleRotation);
+  $("#scimmia").sceneEl.addEventListener("onefingermove", handleRotation);
   $("#scimmia").sceneEl.addEventListener("twofingermove", handleScale);
+
+  handleRotation(event) {
+    if (isMarkerVisible) {
+      el.object3D.rotation.y +=
+        event.detail.positionChange.x * 5;
+
+      el.object3D.rotation.x +=
+        event.detail.positionChange.y * 5;
+    }
+  }
 
   </script>
 
