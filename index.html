@@ -11,6 +11,13 @@
     <script>
         THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
     </script>
+
+
+    <style>
+      #scimmia{
+        transform: rotate(90)
+      }
+    </style>
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
@@ -34,14 +41,6 @@
 <script>
   $("#scena").sceneEl.addEventListener("onefingermove", handleRotation);
   $("#scena").sceneEl.addEventListener("twofingermove", handleScale);
-
-  handleRotation(event) {
-      el.object3D.rotation.y +=
-        event.detail.positionChange.x * 5;
-
-      el.object3D.rotation.x +=
-        event.detail.positionChange.y * 5;
-  }
 
   </script>
 
