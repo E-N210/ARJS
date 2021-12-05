@@ -15,26 +15,17 @@
 
     <style>
 
-      
+
     </style>
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
-    id="scena"
+    id="scena1"
         vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
 
-
-        <a-nft
-          type="nft"
-          url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
-          smooth="true"
-          smoothCount="10"
-          smoothTolerance=".01"
-          smoothThreshold="5"
-        >
 
         <a-entity gltf-model="./magnemite/suzanne.gltf"
         gps-entity-place="longitude: 45.461647; latitude: 9.225049; altitude:117"
@@ -50,11 +41,29 @@
          simulateAltitude= 117 -->
          gpsTimeInterval=20></a-camera>
 
+
+
+
+         <a-nft
+           type="nft"
+           url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+           smooth="true"
+           smoothCount="10"
+           smoothTolerance=".01"
+           smoothThreshold="5"
+         >
+           <a-entity
+             gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+             scale="5 5 5"
+             position="50 150 0"
+             id="trex"
+           >
+           </a-entity>
+         </a-nft>
+
 	</a-scene>
 
-
 <script>
-console.log($("#camera").gpsMinAccuracy)
 
   </script>
 
