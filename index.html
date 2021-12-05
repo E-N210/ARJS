@@ -35,13 +35,16 @@
 
 
         <a-entity gltf-model="./magnemite/suzanne.gltf"
-        gps-entity-place="longitude: 45.508520; latitude: 9.162837; altitude:132"
+        gps-entity-place="longitude: 45.461604; latitude: 9.225512; altitude:117"
         id="scimmia"/>
 
         <a-camera gps-camera rotation-reader
          positionMinAccuracy="10"
-         gpsMinDistance=100
-         gpsTimeInterval=20000></a-camera>
+         gpsMinDistance=0
+         simulateLatitude=45.461610
+         simulateLongitude= 9.225220
+         simulateAltitude= 117
+         gpsTimeInterval=20></a-camera>
 
 	</a-scene>
 <script>
