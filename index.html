@@ -38,9 +38,11 @@
         gps-entity-place="longitude: 45.461647; latitude: 9.225049; altitude:117"
         id="scimmia"/>
 
-        <a-camera gps-camera rotation-reader
+        <a-camera
+        id="camera"
+         gps-camera rotation-reader
          positionMinAccuracy="10"
-         gpsMinDistance=1
+         gpsMinDistance=5
         <!-- simulateLatitude=45.461610
          simulateLongitude= 9.225220
          simulateAltitude= 117 -->
@@ -48,8 +50,7 @@
 
 	</a-scene>
 <script>
-  $("#scimmia").addEventListener("onefingermove", handleRotation);
-
+console.log($("#camera").gpsMinAccuracy)
 
   </script>
 
