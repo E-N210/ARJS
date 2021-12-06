@@ -38,28 +38,28 @@
 
 
         <a-entity
-        link="href: https://google.com"
+        navigate-on-click="url: https://google.com"
         gltf-model="./magnemite/suzanne.gltf"
         gps-entity-place="longitude: 45.848561; latitude: 7.734035; altitude:1597"
         />
 
 
                 <a-entity
-                link="href: https://google.com"
+                navigate-on-click="url: https://google.com"
                 gltf-model="./magnemite/suzanne.gltf"
                 gps-entity-place="longitude: 45.848525; latitude: 7.734114; altitude:1597"
                 />
 
 
                         <a-entity
-                        link="href: https://google.com"
+                        navigate-on-click="url: https://google.com"
                         gltf-model="./magnemite/suzanne.gltf"
                         gps-entity-place="longitude: 45.846696; latitude: 7.732996; altitude:1594"
                         />
 
 
                                 <a-entity
-                                link="href: https://google.com"
+                                navigate-on-click="url: https://google.com"
                                 gltf-model="./magnemite/suzanne.gltf"
                                 gps-entity-place="longitude: 45.843606; latitude: 7.732104; altitude:1582"
                                 />
@@ -70,9 +70,9 @@
          positionMinAccuracy="10"
          gpsMinDistance=1
          maxDistance=20
-         simulateLatitude=45.848505
+         <!--simulateLatitude=45.848505
          simulateLongitude= 7.734010
-         simulateAltitude= 1597
+         simulateAltitude= 1597-->
          gpsTimeInterval=20></a-camera>
 
        </a-scene>
@@ -82,6 +82,24 @@
 
 
 <script>
+
+
+  AFRAME.registerComponent('navigate-on-click', {
+     schema: {
+       url: {default: ''}
+     },
+
+     init: function () {
+       var data = this.data;
+       var el = this.el;
+
+       el.addEventListener('click', function () {
+         window.location.href = data.url;
+       });
+     }
+   });
+
+
 
 
   </script>
