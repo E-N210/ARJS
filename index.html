@@ -30,15 +30,12 @@
     id="scena1"
         vr-mode-ui="enabled: false"
           embedded
-          renderer="logarithmicDepthBuffer: true;"
         arjs='
               sourceType: webcam;
-              trackingMethod: best;
               sourceWidth:1280;
               sourceHeight:960;
               displayWidth: 1280;
-              displayHeight: 960;
-              debugUIEnabled: false'>
+              displayHeight: 960;'>
 
 
         <a-entity gltf-model="./magnemite/suzanne.gltf"
@@ -70,9 +67,16 @@
          simulateLongitude= 7.734020
          simulateAltitude= 1597-->
          gpsTimeInterval=20></a-camera>
+       </a-scene>
 
 
 
+       <a-scene
+           vr-mode-ui="enabled: false;"
+           renderer="logarithmicDepthBuffer: true;"
+           embedded
+           arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+         >
 
          <a-nft
            type="nft"
@@ -91,7 +95,9 @@
            </a-entity>
          </a-nft>
 
-	</a-scene>
+         <a-entity camera></a-entity>
+</a-scene>
+
 
 <script>
 
