@@ -45,21 +45,21 @@
 
 
                 <a-entity
-                navigate-on-click="url: https://google.com"
+                link="href: https://ar-js-org.github.io/studio/"
                 gltf-model="./magnemite/suzanne.gltf"
                 gps-entity-place="longitude: 45.848525; latitude: 7.734114; altitude:1597"
                 />
 
 
                         <a-entity
-                        navigate-on-click="url: https://google.com"
+                        link="href: https://ar-js-org.github.io/studio/"
                         gltf-model="./magnemite/suzanne.gltf"
                         gps-entity-place="longitude: 45.846696; latitude: 7.732996; altitude:1594"
                         />
 
 
                                 <a-entity
-                                navigate-on-click="url: https://google.com"
+                                link="href: https://ar-js-org.github.io/studio/"
                                 gltf-model="./magnemite/suzanne.gltf"
                                 gps-entity-place="longitude: 45.843606; latitude: 7.732104; altitude:1582"
                                 />
@@ -67,7 +67,7 @@
 
 
                                               <a-entity
-                                              navigate-on-click="url: https://google.com"
+                                              link="href: https://ar-js-org.github.io/studio/"
                                               gltf-model="./magnemite/suzanne.gltf"
                                               gps-entity-place="longitude: 45.847653; latitude: 7.734667; altitude:1582"
                                               />
@@ -87,26 +87,6 @@
 
 
 <script>
-
-
-  AFRAME.registerComponent('navigate-on-click', {
-     schema: {
-       url: {default: ''}
-     },
-
-     init: function () {
-       var data = this.data;
-       var el = this.el;
-
-       el.addEventListener('click', function () {
-         window.location.href = data.url;
-       });
-     }
-   });
-
-
-
-
   </script>
 
 </body>
