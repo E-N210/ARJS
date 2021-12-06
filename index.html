@@ -73,11 +73,7 @@
          gps-camera rotation-reader
          positionMinAccuracy="10"
          gpsMinDistance=1
-         maxDistance=20
-         gps-entity-place="longitude: 45.843606; latitude: 7.732104; altitude:1582"
-            >
-
-       </a-camera>
+         maxDistance=20></a-camera>
 
        </a-scene>
 
@@ -85,21 +81,27 @@
 
 
 
-       <script>
-         AFRAME.registerComponent('navigate-on-click', {
-           schema: {
-             url: {default: ''}
-           },
+<script>
 
-           init: function () {
-             var data = this.data;
-             var el = this.el;
 
-             el.addEventListener('click', function () {
-               window.location.href = data.url;
-             });
-           }
-         });
-       </script>
+  AFRAME.registerComponent('navigate-on-click', {
+     schema: {
+       url: {default: ''}
+     },
+
+     init: function () {
+       var data = this.data;
+       var el = this.el;
+
+       el.addEventListener('click', function () {
+         window.location.href = data.url;
+       });
+     }
+   });
+
+
+
+
+  </script>
 
 </body>
