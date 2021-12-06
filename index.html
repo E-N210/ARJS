@@ -74,10 +74,8 @@
          positionMinAccuracy="10"
          gpsMinDistance=1
          maxDistance=20
-            <!-- simulateLatitude=45.848505
-            simulateLongitude= 7.734010
-            simulateAltitude= 1597 -->
-         gpsTimeInterval=20>
+         gps-entity-place="longitude: 45.843606; latitude: 7.732104; altitude:1582"
+            >
 
        </a-camera>
 
@@ -87,27 +85,21 @@
 
 
 
-<script>
+       <script>
+         AFRAME.registerComponent('navigate-on-click', {
+           schema: {
+             url: {default: ''}
+           },
 
+           init: function () {
+             var data = this.data;
+             var el = this.el;
 
-  AFRAME.registerComponent('navigate-on-click', {
-     schema: {
-       url: {default: ''}
-     },
-
-     init: function () {
-       var data = this.data;
-       var el = this.el;
-
-       el.addEventListener('click', function () {
-         window.location.href = data.url;
-       });
-     }
-   });
-
-
-
-
-  </script>
+             el.addEventListener('click', function () {
+               window.location.href = data.url;
+             });
+           }
+         });
+       </script>
 
 </body>
