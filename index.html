@@ -37,22 +37,32 @@
               debugUIEnabled: false;'>
 
 
-        <a-entity gltf-model="./magnemite/suzanne.gltf"
+        <a-entity
+        id="scimmia1"
+        gltf-model="./magnemite/suzanne.gltf"
         gps-entity-place="longitude: 45.848561; latitude: 7.734035; altitude:1597"
         >
 
 
-                <a-entity gltf-model="./magnemite/suzanne.gltf"
+                <a-entity
+                id="scimmia2"
+                gltf-model="./magnemite/suzanne.gltf"
                 gps-entity-place="longitude: 45.848525; latitude: 7.734114; altitude:1597"
                 />
 
 
-                        <a-entity gltf-model="./magnemite/suzanne.gltf"
+                        <a-entity
+
+                        id="scimmia3"
+                        gltf-model="./magnemite/suzanne.gltf"
                         gps-entity-place="longitude: 45.846696; latitude: 7.732996; altitude:1594"
                         />
 
 
-                                <a-entity gltf-model="./magnemite/suzanne.gltf"
+                                <a-entity
+
+                                id="scimmia4"
+                                gltf-model="./magnemite/suzanne.gltf"
                                 gps-entity-place="longitude: 45.843606; latitude: 7.732104; altitude:1582"
                                 />
 
@@ -62,9 +72,9 @@
          positionMinAccuracy="10"
          gpsMinDistance=1
          maxDistance=20
-         <!--simulateLatitude=45.848515
-         simulateLongitude= 7.734020
-         simulateAltitude= 1597 -->
+         simulateLatitude=45.848505
+         simulateLongitude= 7.734010
+         simulateAltitude= 1597
          gpsTimeInterval=20></a-camera>
 
        </a-scene>
@@ -74,6 +84,24 @@
 
 
 <script>
+  $("#scimmia1").addEventListener('click', function () {
+    window.location.href = 'https://google.com';
+  });
+
+
+    $("#scimmia2").addEventListener('click', function () {
+      window.location.href = 'https://google.com';
+    });
+
+
+      $("#scimmia3").addEventListener('click', function () {
+        window.location.href = 'https://google.com';
+      });
+
+
+        $("#scimmia4").addEventListener('click', function () {
+          window.location.href = 'https://google.com';
+        });
 
   </script>
 
