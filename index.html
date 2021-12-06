@@ -30,7 +30,7 @@
         vr-mode-ui="enabled: false"
         renderer="logarithmicDepthBuffer: true;"
 		      embedded
-        arjs='trackingMethod: best; 
+        arjs='trackingMethod: best;
               sourceType: webcam;
               sourceWidth:1280;
               sourceHeight:960;
@@ -40,17 +40,33 @@
 
 
         <a-entity gltf-model="./magnemite/suzanne.gltf"
-        gps-entity-place="longitude: 45.461647; latitude: 9.225049; altitude:117"
-        id="scimmia"/>
+        gps-entity-place="longitude: 45.848561; latitude: 7.734035; altitude:1597"
+        >
+
+
+                <a-entity gltf-model="./magnemite/suzanne.gltf"
+                gps-entity-place="longitude: 45.848525; latitude: 7.734114; altitude:1597"
+                />
+
+
+                        <a-entity gltf-model="./magnemite/suzanne.gltf"
+                        gps-entity-place="longitude: 45.846696; latitude: 7.732996; altitude:1594"
+                        />
+
+
+                                <a-entity gltf-model="./magnemite/suzanne.gltf"
+                                gps-entity-place="longitude: 45.843606; latitude: 7.732104; altitude:1582"
+                                />
 
         <a-camera
         id="camera"
          gps-camera rotation-reader
          positionMinAccuracy="10"
-         gpsMinDistance=5
-        <!-- simulateLatitude=45.461610
-         simulateLongitude= 9.225220
-         simulateAltitude= 117 -->
+         gpsMinDistance=1
+         maxDistance=20
+        simulateLatitude=45.848515
+         simulateLongitude= 7.734020
+         simulateAltitude= 1597
          gpsTimeInterval=20></a-camera>
 
 
